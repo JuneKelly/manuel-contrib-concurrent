@@ -8,7 +8,7 @@ concurrently.
 Simply pass an array of commands to the `manuel_concurrent` function.
 
 Example:
-```
+```bash
 # in a manuelfile
 
 load_plugin manuel-contrib-concurrent
