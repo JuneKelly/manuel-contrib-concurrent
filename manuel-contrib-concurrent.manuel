@@ -1,0 +1,22 @@
+#! /usr/bin/env bash
+
+# manuel-contrib-concurrent
+
+
+function manuel_concurrent {
+  tasks=$1
+  if [[ ${#tasks[@]} == 0 ]]; then
+    echo ">> Warning: manuel_concurrent called with no tasks array"
+  fi
+  for t in ${tasks[@]}
+  do
+    echo ">> Starting $t"
+    $t &
+  done
+  echo ">> Waiting for concurrent tasks to finish..."
+  for j in `jobs -p`
+  do
+    wait $j
+  done
+  return 0
+}
