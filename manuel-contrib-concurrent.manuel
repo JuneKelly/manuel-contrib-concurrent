@@ -1,5 +1,6 @@
 #! /usr/bin/env bash
 
+
 # manuel-contrib-concurrent
 
 
@@ -14,9 +15,6 @@ function manuel_concurrent {
     $t &
   done
   echo ">> Waiting for concurrent tasks to finish..."
-  for j in `jobs -p`
-  do
-    wait $j
-  done
+  wait
   return 0
 }
