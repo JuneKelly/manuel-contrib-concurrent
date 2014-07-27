@@ -39,3 +39,10 @@ function do_all_work {
   manuel_concurrent $tasks
 }
 ```
+
+
+# Changelog
+
+## v1.0.0
+
+* Add a version file
