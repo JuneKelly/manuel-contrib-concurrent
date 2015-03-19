@@ -9,7 +9,7 @@ function manuel_concurrent {
   if [[ ${#tasks[@]} == 0 ]]; then
     echo ">> Warning: manuel_concurrent called with no tasks array"
   fi
-  for t in ${tasks[@]}
+  for t in "${tasks[@]}"
   do
     echo ">> Starting $t"
     $t &
